@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,6 +15,8 @@ import { MoviesInCategoryComponent } from './pages/categories/movies-in-category
 import { AppRoutingModule } from './app-routing.module';
 import { YearsComponent } from './pages/years/years.component';
 import { MoviesInYearsComponent } from './pages/years/movies-in-years/movies-in-years.component';
+import { HttpTestComponent } from './pages/http-test/http-test.component';
+import { AddMovieComponent } from './pages/add-movie/add-movie.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +29,10 @@ import { MoviesInYearsComponent } from './pages/years/movies-in-years/movies-in-
     MovieCoverComponent,
     YearsComponent,
     MoviesInYearsComponent,
+    HttpTestComponent,
+    AddMovieComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, RouterModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, RouterModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

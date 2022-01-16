@@ -23,5 +23,7 @@ export class MoviesInCategoryComponent implements OnInit {
     this.movies = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => this.http.getMoviesFromCategory(params.get('category')))
     )
+    console.log('this.route', this.route);
+
   }
 }
